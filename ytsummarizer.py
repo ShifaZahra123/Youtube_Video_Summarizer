@@ -118,6 +118,6 @@ if st.button("Get Detailed Notes"):
     transcript_text=extract_transcript_details(youtube_link)
 
     if transcript_text:
-        summary=generate_gemini_content(transcript_text,prompt)
+        summary=generate_notes(transcript_text,subject)
         st.markdown("## Detailed Notes:")
         st.write(summary)
