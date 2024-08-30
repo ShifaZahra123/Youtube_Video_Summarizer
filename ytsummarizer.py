@@ -125,6 +125,3 @@ if st.button("Get Detailed Notes"):
             st.write(detailed_notes)
     else:
             st.error("Failed to extract transcript.")
-
-if __name__ == "__main__":
-    main()
