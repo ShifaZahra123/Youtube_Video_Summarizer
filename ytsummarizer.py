@@ -123,7 +123,7 @@ if st.button("Get Detailed Notes"):
             detailed_notes = generate_notes(transcript_text, subject)
             st.markdown("## Detailed Notes:")
             st.write(detailed_notes)
-        else:
+    else:
             st.error("Failed to extract transcript.")
 
 if __name__ == "__main__":
