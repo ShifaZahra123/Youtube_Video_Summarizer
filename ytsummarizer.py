@@ -118,6 +118,13 @@ if st.button("Get Detailed Notes"):
     transcript_text=extract_transcript_details(youtube_link)
 
     if transcript_text:
-        summary=generate_notes(transcript_text,subject)
-        st.markdown("## Detailed Notes:")
-        st.write(summary)
+            st.success("Transcript extracted successfully!")
+            # Generate detailed notes
+            detailed_notes = generate_notes(transcript_text, subject)
+            st.markdown("## Detailed Notes:")
+            st.write(detailed_notes)
+        else:
+            st.error("Failed to extract transcript.")
+
+if __name__ == "__main__":
+    main()
